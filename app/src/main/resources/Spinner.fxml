@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="root" prefHeight="225.0" prefWidth="249.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+
+    <JFXSpinner startingAngle="-40" styleClass="materialDesign-purple, first-spinner" />
+    <JFXSpinner startingAngle="-90" styleClass="materialDesign-blue, second-spinner" />
+    <JFXSpinner startingAngle="-120" styleClass="materialDesign-cyan, third-spinner" />
+    <JFXSpinner startingAngle="-150" styleClass="materialDesign-green, fourth-spinner" />
+    <JFXSpinner startingAngle="-180" styleClass="materialDesign-yellow, fifth-spinner" />
+    <JFXSpinner startingAngle="-210" styleClass="materialDesign-orange, sixth-spinner" />
+    <JFXSpinner startingAngle="-240" styleClass="materialDesign-red, seventh-spinner" />
+    <
+
+</StackPane>
