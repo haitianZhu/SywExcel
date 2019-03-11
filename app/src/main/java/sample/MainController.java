@@ -262,12 +262,14 @@ public class MainController implements Initializable {
                 System.out.println("aaaa");
                 if ("mTextAreaA".equals(uniqueID)) {
 
+                    mHeader = (List<Object>) data.get(0);
+                    data.remove(0);
                     mDataA = data;
-                    mHeader = (List<Object>) mDataA.get(0);
                     selectColumn(data, mDataListA, columnInfo);
 
                 } else if ("mTextAreaB".equals(uniqueID)) {
 
+                    data.remove(0);
                     mDataB = data;
                     selectColumn(data, mDataListB, columnInfo);
                 }
@@ -284,11 +286,19 @@ public class MainController implements Initializable {
                     // 将匹配出的result的站点名称，增加至原始数据中
                     ParseUtil.convertMatchResult(mDataA, result);
 
+                    List<List<String>> headersList = new ArrayList<>();
+                    List<String> headers = new ArrayList<>();
+                    for (Object o : mHeader) {
+                        headers.add(o.toString());
+                    }
+                    headersList.add(headers);
+                    List header = headersList;
+
                     int sheetA = Integer.valueOf(mTF_sheetIndexA.getText());
                     mDataA.add(0, mHeader);
                     List aa = mDataA;
                     String fileNameA = mTextAreaA.getText();
-                    ParseUtil.writeResult(getResultFileName(fileNameA), sheetA, (List<List<Object>>) aa);
+                    ParseUtil.writeResult(getResultFileName(fileNameA), sheetA, header, (List<List<Object>>) aa);
 
                     stopDialog();
                     System.out.println("111");
@@ -301,7 +311,8 @@ public class MainController implements Initializable {
 
         private String getResultFileName(String filename) {
 
-            return filename.substring(0, filename.lastIndexOf("/") + 1) + RESULT_FILENAME;
+            int index = Math.max(filename.lastIndexOf("/"), filename.lastIndexOf("\\"));
+            return filename.substring(0, index + 1) + RESULT_FILENAME;
         }
 
         private void selectColumn(List<Object> data, List<LocationInfo> selectedList, ColumnInfo columnInfo) {

@@ -37,7 +37,7 @@ public class ParseUtil {
 
         InputStream inputStream = FileUtil.getFileInputStream(filename);
         ExcelListener excelListener = new ExcelListener(listener);
-        EasyExcelFactory.readBySax(inputStream, new Sheet(sheetIndex, 1), excelListener);
+        EasyExcelFactory.readBySax(inputStream, new Sheet(sheetIndex, 0), excelListener);
 
         inputStream.close();
     }
@@ -111,15 +111,16 @@ public class ParseUtil {
      * @param sheetIndex
      * @param data
      */
-    public static void writeResult(String filename, int sheetIndex, List<List<Object>> data) {
+    public static void writeResult(String filename, int sheetIndex, List<List<String>> header, List<List<Object>> data) {
 
         try {
             OutputStream out = new FileOutputStream(filename);
             ExcelWriter writer = EasyExcelFactory.getWriter(out);
             //写第一个sheet, sheet1  数据全是List<String> 无模型映射关系
-            Sheet sheet = new Sheet(sheetIndex, 1);
+            Sheet sheet = new Sheet(sheetIndex, 0);
+//            sheet.setHead(header);
 //            sheet.setTableStyle(createTableStyle());
-//            sheet.setStartRow(1);
+            sheet.setStartRow(0);
             sheet.setAutoWidth(Boolean.TRUE);
             writer.write1(data, sheet);
 
