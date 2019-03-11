@@ -287,15 +287,14 @@ public class MainController implements Initializable {
                     ParseUtil.convertMatchResult(mDataA, result);
 
                     List<List<String>> headersList = new ArrayList<>();
-                    List<String> headers = new ArrayList<>();
                     for (Object o : mHeader) {
-                        headers.add(o.toString());
+                        List<String> column = new ArrayList<>();
+                        column.add(o.toString());
+                        headersList.add(column);
                     }
-                    headersList.add(headers);
                     List header = headersList;
 
                     int sheetA = Integer.valueOf(mTF_sheetIndexA.getText());
-                    mDataA.add(0, mHeader);
                     List aa = mDataA;
                     String fileNameA = mTextAreaA.getText();
                     ParseUtil.writeResult(getResultFileName(fileNameA), sheetA, header, (List<List<Object>>) aa);

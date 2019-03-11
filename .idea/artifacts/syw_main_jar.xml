@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="syw_main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/syw_main_jar</output-path>
+    <root id="archive" name="syw_main.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/app/out/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="syw_main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/4.2/4b2c12b92dd045aeabf5b2aeeb3220bf010da9d4/asm-4.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.04/3386abf821719bc89c7685f9eaafaf4a842f0199/curvesapi-1.04.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml/3.17/7d8c44407178b73246462842bf1e206e99c8e0a/poi-ooxml-3.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.1/a4cf4688fe1c7e3a63aa636cc96d013af537768e/commons-collections4-4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/2.6.0/29e80d2dd51f9dcdef8f9ffaee0d4dc1c9bbfc87/xmlbeans-2.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jfoenix/jfoenix/8.0.8/143b2fd4929ee36955aa41f1e7d2498188ef2cd0/jfoenix-8.0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/stax/stax-api/1.0.1/49c100caf72d658aca8e58bd74a4ba90fa2b0d70/stax-api-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.controlsfx/controlsfx/8.40.14/7338f13794b82c77ea152803df56a15d376c3b0e/controlsfx-8.40.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.datafx/flow/8.0.1/eb5efe930962872fd9f27c7c751b806ab3965bca/flow-8.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml-schemas/3.17/890114bfa82f5b6380ea0e9b0bf49b0af797b414/poi-ooxml-schemas-3.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/cglib/cglib/3.1/1f1cb6c7a7479e0c7fd7987109e503914bebe84a/cglib-3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.alibaba/easyexcel/1.1.2-beat1/6336666c2a54c25195543979a5ba698d1cab1079/easyexcel-1.1.2-beat1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.datafx/core/8.0.1/d17f9a980d67ed56c01e98b663f2dd5538740f5d/core-8.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi/3.17/ae92292a2043888b40d418da97dc0b669fde326/poi-3.17.jar" path-in-jar="/" />
+      <element id="dir-copy" path="$PROJECT_DIR$/app/src/main/resources" />
+    </root>
+  </artifact>
+</component>

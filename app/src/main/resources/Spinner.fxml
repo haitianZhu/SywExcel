@@ -12,6 +12,5 @@
     <JFXSpinner startingAngle="-180" styleClass="materialDesign-yellow, fifth-spinner" />
     <JFXSpinner startingAngle="-210" styleClass="materialDesign-orange, sixth-spinner" />
     <JFXSpinner startingAngle="-240" styleClass="materialDesign-red, seventh-spinner" />
-    <
 
 </StackPane>
