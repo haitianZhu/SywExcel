@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import com.jfoenix.controls.*?>
+
+<?import javafx.scene.layout.StackPane?>
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+           xmlns="http://javafx.com/javafx/8.0.121">
+    <BorderPane prefHeight="344.0" prefWidth="539.0">
+        <center>
+            <GridPane hgap="20.0" vgap="20.0" BorderPane.alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <VBox prefHeight="200.0" prefWidth="100.0" >
+                        <children>
+                            <Label fx:id="mLabel_1" style="-fx-font-size: 16.0px;-fx-text-fill: rgba(0.0, 0.0, 0.0, 0.87);" text="步骤1 将A文件拖拽至空白框内" />
+                            <TextArea fx:id="mTextAreaA" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+                        </children>
+                    </VBox>
+                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                        <children>
+                            <Label fx:id="mLabel_2" style="-fx-font-size: 16.0px;-fx-text-fill: rgba(0.0, 0.0, 0.0, 0.87);" text="步骤2 将B文件拖拽至空白框内" />
+                            <TextArea fx:id="mTextAreaB" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+                        </children>
+                    </VBox>
+                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1"  style="-fx-padding: 20 0 0 0;">
+                        <Label text="选择A文件的第几个sheet去匹配？" />
+                        <TextField fx:id="mTF_sheetIndexA" prefWidth="100.0" text="1"/>
+                        <HBox prefWidth="100" spacing="20" style="-fx-padding: 20 0 0 0;">
+                            <VBox minWidth="50" prefHeight="44.0" prefWidth="118.0">
+                                <Label text="站名列？" />
+                                <TextField fx:id="mTF_columnIndexAName" text="3" />
+                            </VBox>
+                            <VBox minWidth="50" prefHeight="44.0" prefWidth="118.0">
+                                <Label text="经度列？" />
+                                <TextField fx:id="mTF_columnIndexALong" text="4" />
+                            </VBox>
+                            <VBox minWidth="50" prefHeight="44.0" prefWidth="118.0">
+                                <Label text="纬度列？" />
+                                <TextField fx:id="mTF_columnIndexALati" prefHeight="27.0" prefWidth="65.0" text="5" />
+                            </VBox>
+                        </HBox>
+                    </VBox>
+                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1"  style="-fx-padding: 20 0 0 0;">
+                        <Label text="选择B文件的第几个sheet去匹配？" />
+                        <TextField fx:id="mTF_sheetIndexB" prefWidth="100.0" text="1" />
+                        <HBox prefWidth="100" spacing="20"  style="-fx-padding: 20 0 20 0;">
+                            <VBox minWidth="50" prefHeight="44.0" prefWidth="118.0">
+                                <Label text="站名列？" />
+                                <TextField fx:id="mTF_columnIndexBName" text="9" />
+                            </VBox>
+                            <VBox minWidth="50" prefHeight="44.0" prefWidth="118.0">
+                                <Label text="经度列？" />
+                                <TextField fx:id="mTF_columnIndexBLong" text="15" />
+                            </VBox>
+                            <VBox minWidth="50" prefHeight="44.0" prefWidth="118.0">
+                                <Label text="纬度列？" />
+                                <TextField fx:id="mTF_columnIndexBLati" text="16" />
+                            </VBox>
+                        </HBox>
+                        <Label text="匹配距离精度(米)？" />
+                        <TextField fx:id="mTF_matchDistance" prefWidth="100.0" text="50" />
+                    </VBox>
+                </children>
+                <BorderPane.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </BorderPane.margin>
+            </GridPane>
+        </center>
+        <bottom>
+            <JFXButton fx:id="doBtn" mnemonicParsing="false" onAction="#handleClickDoAction" text="开始干活思密达"
+                       textAlignment="CENTER"
+                       BorderPane.alignment="CENTER" buttonType="RAISED"
+                       style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:18px;" styleClass="jfx">
+                <BorderPane.margin>
+                    <Insets bottom="20.0" />
+                </BorderPane.margin>
+            </JFXButton>
+        </bottom>
+    </BorderPane>
+
+    <JFXDialog fx:id="dialog">
+        <JFXDialogLayout>
+            <heading>
+                <Label>玩命干活中...................</Label>
+            </heading>
+            <body>
+            </body>
+        </JFXDialogLayout>
+    </JFXDialog>
+</StackPane>
+
