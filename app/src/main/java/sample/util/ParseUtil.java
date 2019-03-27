@@ -50,6 +50,7 @@ public class ParseUtil {
 
         List<List<MatchResult>> result = new LinkedList<>();
 
+        MatchResult connector = new MatchResult(0, "+++");
         for (int i = 0; i < firstList.size(); i++) {
 
             LocationInfo firstLocation = firstList.get(i);
@@ -58,6 +59,9 @@ public class ParseUtil {
 
                 double distance = LocationUtil.getDistance(firstLocation.latitude, firstLocation.longitude, secondLocation.latitude, secondLocation.longitude);
                 if (distance <= matchDistance) {
+                    if (!matchResultList.isEmpty()) {
+                        matchResultList.add(connector);
+                    }
                     matchResultList.add(new MatchResult(distance, secondLocation.name));
                 }
             }
